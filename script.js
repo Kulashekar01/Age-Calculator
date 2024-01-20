@@ -44,12 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
         let months = (y3 * 12) + m3;
         let days = Math.floor(30.44 * months) + d3;
         let weeks = Math.floor(days / 7);
+        let weekday = days -(weeks * 7);
         let hours = Math.floor(24 * days);
         let minutes = Math.floor(60 * hours);
         let seconds = Math.floor(60 * minutes);
 
         additionalresults.innerHTML =  `<p>or ${months} months ${d3} days</p>
-                                        <p>or ${weeks} weeks</p>
+                                        <p>or ${weeks} weeks and ${ weekday} days</p>
                                         <p>or ${days} days</p>
                                         <p>or ${hours} hours</p>
                                         <p>or ${minutes} minutes</p>
